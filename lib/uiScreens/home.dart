@@ -64,7 +64,8 @@ class _StateClass extends State<FirstPage>{
         title: Text('First Appliction'),
         backgroundColor: Colors.lightGreen,
       ),
-      body: Center(
+      body: SafeArea(
+        child:SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -72,15 +73,98 @@ class _StateClass extends State<FirstPage>{
             Text('It is my first project and first page'),
             Text('Shown the number by increamented on press of floating button'),
             Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+            Text('Aslam o Alikom'),
+            Text('It is my first project and first page'),
+            Text('Shown the number by increamented on press of floating button'),
+            Text('$counter',style: TextStyle(fontSize: 24,color: Colors.red),),
+
+
+
 
           ],
         ),
       ),
+      ),
 
-      floatingActionButton: FloatingActionButton(
+      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
+      floatingActionButton: FloatingActionButton.extended(
         onPressed: _Increment,
+        label: Text("Add"),
+        icon: Icon(Icons.add),
+      ),
 
-        child: Icon(Icons.add),
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            IconButton(onPressed: (){},
+                icon: Icon(Icons.home,)),
+            Padding(
+              padding: EdgeInsets.fromLTRB(10, 0 , 10, 0),
+            ),
+            IconButton(onPressed: (){},
+                icon: Icon(Icons.account_box,)),
+            Padding(
+              padding: EdgeInsets.fromLTRB(10, 0 , 10, 0),
+            ),
+            IconButton(onPressed: (){},
+                icon: Icon(Icons.chat,))
+          ],
+        ),
       ),
     );
   }
