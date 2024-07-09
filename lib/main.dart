@@ -1,3 +1,5 @@
+import 'package:first_flutter_project/uiScreens/login.dart';
+import 'package:first_flutter_project/uiScreens/tabBarScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:first_flutter_project/uiScreens/home.dart';
 //import 'dart:js_interop';
@@ -15,7 +17,7 @@ class MyFirstApp extends StatelessWidget{
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
       ),
-      home: FirstPage('Abdul Rauf'),
+      home: Tabbarscreen(),
     );
   }
 
