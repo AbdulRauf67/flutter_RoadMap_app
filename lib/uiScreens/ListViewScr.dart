@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
+import 'AnimationActivity.dart';
+
 class Listviewscr extends StatefulWidget{
 
   String title='';
@@ -47,6 +49,13 @@ class _listState extends State<Listviewscr>{
                 },
                 leading:Icon(Icons.grid_4x4_outlined),
                 title:Text('Grid View'),
+              ),
+              ListTile(
+                onTap: (){
+                  Navigator.push(context,  MaterialPageRoute(builder: (context) => Animationactivity()));
+                },
+                leading:Icon(Icons.animation),
+                title:Text('AnimationContainer'),
               ),
               Divider(
                 height: 2,color: Colors.grey,
