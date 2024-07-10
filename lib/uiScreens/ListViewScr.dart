@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:first_flutter_project/uiScreens/GridViewScr.dart';
+import 'package:first_flutter_project/uiScreens/StudentsData.dart';
 import 'package:first_flutter_project/uiScreens/home.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
@@ -38,8 +39,11 @@ class _listState extends State<Listviewscr>{
               fit: BoxFit.cover,)),
 
               ListTile(
-                  leading:Icon(Icons.home),
-                  title:Text('Home'),
+                onTap: (){
+                  Navigator.push(context,  MaterialPageRoute(builder: (context) => Studentsdata()));
+                },
+                  leading:Icon(Icons.data_saver_on),
+                  title:Text('Students'),
                   ),
               ListTile(
                 leading:Icon(Icons.account_box),
