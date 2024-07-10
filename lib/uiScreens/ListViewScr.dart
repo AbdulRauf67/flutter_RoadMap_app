@@ -8,6 +8,8 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 import 'AnimationActivity.dart';
+import 'GesturesPractice.dart';
+import 'InteractivityScr.dart';
 
 class Listviewscr extends StatefulWidget{
 
@@ -56,6 +58,20 @@ class _listState extends State<Listviewscr>{
                 },
                 leading:Icon(Icons.animation),
                 title:Text('AnimationContainer'),
+              ),
+              ListTile(
+                onTap: (){
+                  Navigator.push(context,  MaterialPageRoute(builder: (context) => Gesturespractice()));
+                },
+                leading:Icon(Icons.gesture),
+                title:Text('Gesture Detector'),
+              ),
+              ListTile(
+                onTap: (){
+                  Navigator.push(context,  MaterialPageRoute(builder: (context) => InteractivityScr()));
+                },
+                leading:Icon(Icons.density_small),
+                title:Text('Interactivity'),
               ),
               Divider(
                 height: 2,color: Colors.grey,
