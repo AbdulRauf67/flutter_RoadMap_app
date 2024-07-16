@@ -2,15 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class Tabbarscreen extends StatefulWidget{
+class Tabbarscreen1 extends StatefulWidget{
 
 
   @override
-  State<Tabbarscreen> createState() => _TabState();
+  State<Tabbarscreen1> createState() => _TabState();
 
 }
 
-class _TabState extends State<Tabbarscreen> {
+class _TabState extends State<Tabbarscreen1> {
 
   @override
   Widget build(BuildContext context) {

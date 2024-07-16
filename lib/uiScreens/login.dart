@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:first_flutter_project/uiScreens/home.dart';
+import 'package:first_flutter_project/uiScreens/tabBarScreen.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +41,7 @@ class _LoginState extends State<login>{
 
       Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => FirstPage(userName))
+          MaterialPageRoute(builder: (context) => Tabbarscreen())
       );
 
     }

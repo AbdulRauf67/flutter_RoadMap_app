@@ -85,44 +85,6 @@ class _StateClass extends State<FirstPage>{
   }
 
 
-  bool logout=false;
-  void signout(BuildContext context) async {
-    Widget buttonYes=TextButton(onPressed: (){
-      setState(() {
-        logout=true;
-      });
-      Navigator.pop(context);// use to dismiss the alert dialog
-    },
-        child: Text("Yes"));
-    Widget buttonNo=TextButton(onPressed: (){
-      setState(() {
-        logout=false;
-      });
-      Navigator.pop(context);// use to dismiss the alert dialog
-
-    },
-        child: Text("No"));
-
-
-    AlertDialog alert=AlertDialog(
-      title: Text('Logout'),
-      content: Text('Sure you can logout?'),
-      actions: [
-        buttonYes,
-        buttonNo
-      ],
-    );
-    await showDialog(
-        context: context,
-        builder: (context) {
-      return alert;
-    });
-
-    if(logout){
-      Navigator.pop(context);
-    }
-  }
-
 
   @override
   Widget build(BuildContext context) {
@@ -131,12 +93,7 @@ class _StateClass extends State<FirstPage>{
         automaticallyImplyLeading: false,
         title: Text('WellCome '+widget.title),
         backgroundColor: Colors.lightGreen,
-        actions: [
-          IconButton(onPressed: () {
-            signout(context);
-          },
-              icon: Icon(Icons.logout))
-        ],
+
       ),
 
       body: SafeArea(

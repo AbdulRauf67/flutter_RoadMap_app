@@ -41,7 +41,6 @@ class DBManager{
   Future<List<Studentmodel>> loadStudentsRecord() async {
     Database _db=await this.initDatabase();
 
-
     List<Map<String,dynamic>> studentsList=await _db.query('students');
 
     return List.generate(studentsList.length, (index){

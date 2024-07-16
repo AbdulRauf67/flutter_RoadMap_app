@@ -1,14 +1,11 @@
 import 'dart:ui';
 import 'package:first_flutter_project/models/DBManager.dart';
 import 'package:first_flutter_project/models/StudentModel.dart';
-import 'package:first_flutter_project/uiScreens/StudentsData.dart';
-import 'package:first_flutter_project/uiScreens/home.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-
 class AddStudentData extends StatefulWidget{
 
   late Studentmodel oldStudentRecord;
@@ -87,11 +84,6 @@ class _DataState extends State<AddStudentData>{
                   padding: EdgeInsets.all(10.0),
                   child: Column(
                       children: [
-
-                        SizedBox(
-                          height: 30,
-                          width: 30,
-                        ),
 
                         Center(
                             child: Padding(
@@ -201,8 +193,6 @@ class _DataState extends State<AddStudentData>{
 
                             ]
                         ),
-
-
                       ]
                   ),
                 ),

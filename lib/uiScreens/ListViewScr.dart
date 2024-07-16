@@ -72,10 +72,10 @@ class _listState extends State<Listviewscr>{
               ),
               ListTile(
                 onTap: (){
-                  Navigator.push(context,  MaterialPageRoute(builder: (context) => InteractivityScr()));
+                  Navigator.push(context,  MaterialPageRoute(builder: (context) => FirstPage('Abdul Rauf')));
                 },
                 leading:Icon(Icons.density_small),
-                title:Text('Interactivity'),
+                title:Text('Rendom Ui Practice'),
               ),
               Divider(
                 height: 2,color: Colors.grey,

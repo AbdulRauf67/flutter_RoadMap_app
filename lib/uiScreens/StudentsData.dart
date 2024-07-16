@@ -52,22 +52,24 @@ class _StudentState extends State<Studentsdata> {
             return Center(child:  Text('Error '/*+ snapshot.error.toString()*/));
           }
           else if(snapshot.hasData){
-            List<ListTile> _tilesList=[];
+            List<Card> _tilesList=[];
             
             _studentsList!.forEach((element){
-              ListTile _tile=ListTile(
-                title: Text(element.sName, style: TextStyle(fontSize: 20),),
-                subtitle: Text(element.sAge.toString(), style: TextStyle(fontSize: 20),),
-                trailing: Wrap(
-                  spacing: 5,
-                  children: [
-                    IconButton(
-                        onPressed: (){_editStudentRecord(element);},
-                        icon: Icon(Icons.edit_note)),
-                    IconButton(
-                      onPressed: (){_deleteStudent(element.uID);},
-                      icon: Icon(Icons.delete),),
-                  ],
+              Card _tile=Card(
+                child: ListTile(
+                  title: Text(element.sName, style: TextStyle(fontSize: 24),),
+                  subtitle: Text('Age: '+element.sAge.toString(), style: TextStyle(fontSize: 16),),
+                  trailing: Wrap(
+                    spacing: 5,
+                    children: [
+                      IconButton(
+                          onPressed: (){_editStudentRecord(element);},
+                          icon: Icon(Icons.edit_note)),
+                      IconButton(
+                        onPressed: (){_deleteStudent(element.uID);},
+                        icon: Icon(Icons.delete),),
+                    ],
+                  ),
                 ),
               );
               _tilesList.add(_tile);
@@ -93,12 +95,60 @@ class _StudentState extends State<Studentsdata> {
     });
   }
 
+
+
+
+  bool logout=false;
+  void signout(BuildContext context) async {
+    Widget buttonYes=TextButton(onPressed: (){
+      setState(() {
+        logout=true;
+      });
+      Navigator.pop(context);// use to dismiss the alert dialog
+    },
+        child: Text("Yes"));
+    Widget buttonNo=TextButton(onPressed: (){
+      setState(() {
+        logout=false;
+      });
+      Navigator.pop(context);// use to dismiss the alert dialog
+
+    },
+        child: Text("No"));
+
+
+    AlertDialog alert=AlertDialog(
+      title: Text('Logout'),
+      content: Text('Sure you can logout?'),
+      actions: [
+        buttonYes,
+        buttonNo
+      ],
+    );
+    await showDialog(
+        context: context,
+        builder: (context) {
+          return alert;
+        });
+
+    if(logout){
+      Navigator.pop(context);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text('StudentsData'),
         backgroundColor: Colors.lightGreenAccent,
+        actions: [
+          IconButton(onPressed: () {
+            signout(context);
+          },
+              icon: Icon(Icons.logout))
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(

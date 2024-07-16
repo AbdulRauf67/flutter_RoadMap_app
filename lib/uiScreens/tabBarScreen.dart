@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
+import 'InteractivityScr.dart';
 import 'ListViewScr.dart';
+import 'StudentsData.dart';
 import 'login.dart';
 
 class Tabbarscreen extends StatefulWidget{
@@ -37,9 +39,10 @@ class _TabState extends State<Tabbarscreen> with SingleTickerProviderStateMixin{
         child: TabBarView(
           controller: _tabController,
           children: [
-            FirstPage('Abdul Rauf'),
+           // FirstPage('Abdul Rauf'),
+            Studentsdata(),
             Listviewscr(),
-            login()
+            InteractivityScr()
         ],
         ),
       ),
@@ -59,8 +62,8 @@ class _TabState extends State<Tabbarscreen> with SingleTickerProviderStateMixin{
               text: 'ListView',
             ),
             Tab(
-              icon: Icon(Icons.login),
-              text: 'Login',
+              icon: Icon(Icons.interests),
+              text: 'Interaction',
             ),
         ],
         ),
